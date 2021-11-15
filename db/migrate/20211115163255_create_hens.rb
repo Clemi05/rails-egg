@@ -4,7 +4,7 @@ class CreateHens < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.float :rating
-      t.float :price_per_day
+      t.integer :price_per_day
       t.string :breed
       t.string :profile_picture
       t.integer :eggs_per_day
