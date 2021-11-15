@@ -1,0 +1,2 @@
+class Hen < ApplicationRecord
+end
