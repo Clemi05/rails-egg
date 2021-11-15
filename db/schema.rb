@@ -10,21 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_15_151632) do
-
+ActiveRecord::Schema.define(version: 2021_11_15_164503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-
-  create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "profile_picture"
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.integer "price"
+    t.bigint "user_id", null: false
+    t.bigint "hen_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password"
+    t.index ["hen_id"], name: "index_bookings_on_hen_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "hens", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.float "rating"
+    t.integer "price_per_day"
+    t.string "breed"
+    t.string "profile_picture"
+    t.integer "eggs_per_day"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "bookings", "hens"
+  add_foreign_key "bookings", "users"
 end
