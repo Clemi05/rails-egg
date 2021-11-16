@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :hens do
     resources :bookings, only: %i[new create]
   end
+  resources :hens, only: :destroy
 end
