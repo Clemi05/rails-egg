@@ -1,21 +1,34 @@
-<h1>Select your hen</h1>
-
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
+<div id="hen-index" >
+  <div class="container pt-5" >
+  <h1 id="title-new-hen">Select your hen</h1>
+  <br>
+  <p>Find below a top notch selection of hens that match your criterias! </p>
+  </div>
+  <div class="container">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
   <% @hens.each do |hen| %>
     <div class="col">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1612878010854-1250dfc5000a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80" class="card-img-top" alt="...">
-        <div class="card-body">
-              <h5><%= hen.name %></h5>
+        <div class="card-sl">
+            <div class="card-image">
+              <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637073577/sippakorn-yamkasikorn-wWIK8hnESnY-unsplash_xgxg19.jpg" class="img-fluid card-img-top" alt="...">
+            </div>
+              <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
+              <h5 class="card-heading"><%= hen.name %></h5>
+              <div class="card-text">
               <p><%= hen.description %></p>
               <p>Breed: <%= hen.breed %></p>
               <p>Eggs Per Day: <%= hen.eggs_per_day %></p>
               <p>Rating: <%= hen.rating %></p>
-              <p>Price Per Day: <%= hen.price_per_day %>€</p>
+              <p>Price Per Day: <%= hen.price_per_day %></p>
+              </div>
+                <div class="col text-center">
+                  <a href="#" class="card-button">Select <%= hen.name %></a>
+                </div>
         </div>
-        <a href="#" class="btn btn-primary"> <p>Select <%= hen.name %></p></a>
       </div>
     </div>
   <% end %>
+</div>
+  </div>
 </div>
