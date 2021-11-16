@@ -1,6 +1,6 @@
 class HensController < ApplicationController
   def index
-    @hens = Hen.all
+    @hens = policy_scope(Hen)
   end
 
   def show
@@ -15,6 +15,12 @@ class HensController < ApplicationController
     @hen = Hen.new(hen_params)
     @hen.save
     redirect_to hen_path(@hen)
+  end
+
+  def destroy
+    @hen = Hen.find(params[:id])
+    @hen.destroy
+    redirect_to hens_path
   end
 
 private

@@ -1,20 +1,23 @@
-<h1>Select your hen</h1>
+<h1>Select your favorite hen</h1>
 
 <div class="container">
   <div class="row row-cols-1 row-cols-md-2 g-4">
   <% @hens.each do |hen| %>
     <div class="col">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1612878010854-1250dfc5000a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80" class="card-img-top" alt="...">
+        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/golden-hen-kafra-art.jpg" class="card-img-top" alt="...">
         <div class="card-body">
               <h5><%= hen.name %></h5>
               <p><%= hen.description %></p>
               <p>Breed: <%= hen.breed %></p>
               <p>Eggs Per Day: <%= hen.eggs_per_day %></p>
               <p>Rating: <%= hen.rating %></p>
-              <p>Price Per Day: <%= hen.price_per_day %></p>
+              <p>Price Per Day: <%= hen.price_per_day %>€</p>
         </div>
         <a href="#" class="btn btn-primary"> <p>Select <%= hen.name %></p></a>
+        <% if policy(hen).destroy? %>
+          <%= link_to 'delete', hen_path(hen), method: :delete, class: 'btn btn-cancel', data: { confirm: 'Are you sure you want to delete this lovely hen?' } %>
+        <% end %>
       </div>
     </div>
   <% end %>
