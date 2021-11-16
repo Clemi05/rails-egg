@@ -30,3 +30,43 @@ h4 {
     padding: 15px 28px;
     border-radius: 2em;
 }
+
+
+// CSS POUR PAGE NEW
+#hen-new {
+    color: white;
+    background-color: #f9b011;
+    height: 100vh;
+}
+
+.main-button-blue {
+    margin: 20px 0px;
+    background-color: #131429;
+    color: #ffff;
+    border: none;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 28px;
+    border-radius: 2em;
+}
+
+#title-new-hen {
+  color: #131429;
+}
+
+#form {
+  color: #131429;
+  background-color: #ffffff;
+  border-radius: 2em;
+  box-shadow: 0 0 5px 5px 0,5 black;
+}
+
+.form-control {
+  background-color: #F6F6F6;
+  border: none;
+  border-radius: 0,5em;
+  height: 3em;
+  }
+.image-poule {
+  height: 100%;
+}
