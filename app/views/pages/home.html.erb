@@ -1,5 +1,3 @@
-
-
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
@@ -51,7 +49,9 @@
     <h4>FIND YOUR PERFECT HEN</h4>
     <h1>Are you looking for the perfect hen ?
      Egg got this for you !</h1>
-    <button class="main-button" type="button">Discover all hen</button>
+    <%= link_to hens_path do %>
+      <button class="main-button" type="button" >Discover all hen</button>
+    <% end %>
 
     </div>
 
