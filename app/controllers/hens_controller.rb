@@ -23,7 +23,7 @@ class HensController < ApplicationController
     redirect_to hens_path
   end
 
-private
+  private
 
   def hen_params
     params.require(:hen).permit(:name, :description, :price_per_day, :breed, :eggs_per_day, :profile_picture)
