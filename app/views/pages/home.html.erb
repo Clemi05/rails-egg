@@ -1,2 +1,81 @@
-<h1>Salut les poules</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "https://res.cloudinary.com/charlotte-smets/image/upload/v1637055423/lo_dw0h3r.png" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://res.cloudinary.com/charlotte-smets/image/upload/v1637057406/y8dusddghyzvhzemhrzm.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Contact us", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About us", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-sm m-4 p-2" >
+
+ <div class="row m-2">
+    <div class="col-sm-12 col-md-8 col-lg-8">
+    <h4>FIND YOUR PERFECT HEN</h4>
+    <h1>Are you looking for the perfect hen ?
+     Egg got this for you !</h1>
+    <button class="main-button" type="button">Discover all hen</button>
+
+    </div>
+
+    <div class="col-6">
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<div id="jacqueline">
+  <div class="row">
+    <div class="col p-5">
+      <h1>Adopt Jacqueline for 2weeks!</h1>
+      <p>Jacqueline is a Super Hen from Mayenne !
+      She makes more than 20eggs per week and is super friendly with kids! </p>
+      <button class="main-button" type="button">Discover Jacqueline</button>
+
+    </div>
+    <div class="col">
+      <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637060480/jacqueline_hfxdpw.jpg" class="img-fluid rounded" alt="...">
+    </div>
+  </div>
+</div>
