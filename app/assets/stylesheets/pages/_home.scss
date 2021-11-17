@@ -1,14 +1,21 @@
 // Specific CSS for your home-page
-
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
 h4 {
-  font-weight: lighter;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;;
   color: #131429;
   font-size: 16px;
-
   }
+
+h1 {
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;;
+  color: #ffffff;
+  font-size: 44px;
+  }
+
 .navbar-lewagon .navbar-brand img {
     width: 60px;
 }
@@ -20,8 +27,12 @@ h4 {
 
 #p-jacqueline{
   color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
 }
 .header {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
     color: #ffffff;
     height: 400px;
     background-color: #f9b011;
@@ -30,6 +41,8 @@ h4 {
 
 p {
     color: #131429;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
     }
 
 .main-button {
