@@ -23,7 +23,9 @@
             <p>Price Per Day: <%= hen.price_per_day %>€</p>
           </div>
           <div class="col text-center">
-            <a href="#" class="card-button">Select <%= hen.name %></a>
+            <%= link_to hen_path(hen) do %>
+              <button class="card-button" type="button" >Select <%= hen.name %></button>
+            <% end %>
           </div>
         </div>
       </div>
