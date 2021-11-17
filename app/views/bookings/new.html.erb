@@ -4,7 +4,7 @@
   <%= simple_form_for([@hen, @booking]) do |f| %>
     <%= f.input :start_date, as: :date %><br>
     <%= f.input :end_date, as: :date %><br>
-    <h4> <strong>Price/day: <%= @hen.price_per_day %>€</strong></h4>
+    <h4> <strong>Price/day: <%= @hen.price_per_day %>$</strong></h4>
     <%= f.submit class: "main-button"%>
   <% end %><br>
 
