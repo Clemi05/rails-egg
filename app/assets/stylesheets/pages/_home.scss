@@ -56,6 +56,9 @@ p {
     border-radius: 2em;
 }
 
+.content-wrapper {
+  min-height: calc(100vh - 70px - 80px);
+}
 
 // CSS POUR PAGE NEW
 #hen-new {
