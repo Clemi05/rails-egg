@@ -1,0 +1,20 @@
+<div class="container">
+  <br>
+  <h2>Your booking</h2>
+  <div class="row">
+    <div class="card-product">
+      <div class="card-product-infos">
+        <h2>Start Date</h2>
+        <p><%= @booking.start_date %></p>
+      </div>
+      <div class="card-product-infos">
+        <h2>End Date</h2>
+        <p><%= @booking.end_date %></p>
+      </div>
+      <div class="card-product-infos">
+        <h2>Total Price</h2>
+        <p><%= @booking.hen.price_per_day * 30 %>€</p>
+      </div>
+    </div>
+  </div>
+</div>
