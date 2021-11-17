@@ -1,8 +1,11 @@
 // Specific CSS for your home-page
 
+
+
+
 h4 {
   font-weight: lighter;
-  color: #252525;
+  color: #131429;
   font-size: 16px;
 
   }
@@ -15,10 +18,19 @@ h4 {
     background-color: #131429;
 }
 
-#header {
-    color: rgb(0, 0, 0);
-    height: 400px;
+#p-jacqueline{
+  color: white;
 }
+.header {
+    color: #ffffff;
+    height: 400px;
+    background-color: #f9b011;
+    height: 80vh;
+}
+
+p {
+    color: #131429;
+    }
 
 .main-button {
     margin: 20px 0px;
