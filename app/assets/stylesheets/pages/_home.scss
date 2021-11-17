@@ -133,14 +133,23 @@ p {
 }
 
     .card-sl {
-        border-radius: 8px;
-        min-height: 200px;
+      border-radius: 8px;
+      min-height: 200px;
+
+      a {
+        text-decoration: none;
+      }
     }
 
-    .card-image img {
+    .card-image {
+      width: auto;
+      height: 130px;
+      img {
         max-height: 100%;
         max-width: 100%;
         border-radius: 8px 8px 0px 0;
+        object-fit: cover;
+      }
     }
 
     .card-action {
