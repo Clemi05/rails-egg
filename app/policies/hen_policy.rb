@@ -12,4 +12,9 @@ class HenPolicy < ApplicationPolicy
   def destroy?
     user.admin
   end
+
+  def show?
+    true
+  end
+
 end
