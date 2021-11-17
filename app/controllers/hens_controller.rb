@@ -10,18 +10,21 @@ class HensController < ApplicationController
 
   def new
     @hen = Hen.new
+    authorize @hen
   end
 
   def create
     @hen = Hen.new(hen_params)
     @hen.save
     redirect_to hen_path(@hen)
+    authorize @hen
   end
 
   def destroy
     @hen = Hen.find(params[:id])
     @hen.destroy
     redirect_to hens_path
+    authorize @hen
   end
 
   private
