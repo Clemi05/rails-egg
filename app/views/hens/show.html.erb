@@ -4,8 +4,9 @@
     <p><i class="fas fa-egg"></i> <%= @hen.rating %></p>
   </div>
   <%# img need to be changed to cl_img_tag in order to connect to Cloudinary %>
-  <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637060480/jacqueline_hfxdpw.jpg" class="profile-image" alt="<%= @hen.name%>">
-
+  <div class="frame">
+    <img src="<%= @hen.profile_picture %>" alt="<%= @hen.name%>">
+  </div>
 
   <div class="row">
     <div class="card-product">
@@ -22,7 +23,11 @@
         <p><%= @hen.eggs_per_day %></p>
       </div>
       <div class="card-product-infos">
-        <%= link_to  new_hen_booking_path(@hen) do %>
+        <h2>Price/day</h2>
+        <p><%= @hen.price_per_day %>€</p>
+      </div>
+      <div class="card-product-infos">
+        <%= link_to new_hen_booking_path(@hen) do %>
           <button class="main-button" type="button" >Book a hen now!</button>
         <% end %>
       </div>

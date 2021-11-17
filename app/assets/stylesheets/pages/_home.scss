@@ -56,6 +56,9 @@ p {
     border-radius: 2em;
 }
 
+.content-wrapper {
+  min-height: calc(100vh - 70px - 80px);
+}
 
 // CSS POUR PAGE NEW
 #hen-new {
@@ -155,6 +158,21 @@ p {
         height: 15rem;
         object-fit: cover;
         border-radius: 1em 1em 0em 0em;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .card-image {
+      width: auto;
+      height: 130px;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 8px 8px 0px 0;
+        object-fit: cover;
+      }
     }
 
 .card-body{
