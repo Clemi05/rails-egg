@@ -10,21 +10,21 @@
     <div class="col">
       <div class="card">
         <div class="card-sl">
-            <div class="card-image">
-              <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637073577/sippakorn-yamkasikorn-wWIK8hnESnY-unsplash_xgxg19.jpg" class="img-fluid card-img-top" alt="...">
-            </div>
-              <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
-              <h5 class="card-heading"><%= hen.name %></h5>
-              <div class="card-text">
-              <p><%= hen.description %></p>
-              <p>Breed: <%= hen.breed %></p>
-              <p>Eggs Per Day: <%= hen.eggs_per_day %></p>
-              <p>Rating: <%= hen.rating %></p>
-              <p>Price Per Day: <%= hen.price_per_day %></p>
-              </div>
-                <div class="col text-center">
-                  <a href="#" class="card-button">Select <%= hen.name %></a>
-                </div>
+          <div class="card-image">
+            <img src="<%= hen.profile_picture %>" class="img-fluid card-img-top" alt="hen-profile-picture">
+          </div>
+          <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
+          <h5 class="card-heading"><%= hen.name %></h5>
+          <div class="card-text">
+            <p><%= hen.description %></p>
+            <p>Breed: <%= hen.breed %></p>
+            <p>Eggs Per Day: <%= hen.eggs_per_day %></p>
+            <p>Rating: <%= hen.rating %></p>
+            <p>Price Per Day: <%= hen.price_per_day %>€</p>
+          </div>
+          <div class="col text-center">
+            <a href="#" class="card-button">Select <%= hen.name %></a>
+          </div>
         </div>
       </div>
     </div>
