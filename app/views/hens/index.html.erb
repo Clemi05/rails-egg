@@ -1,36 +1,31 @@
 <div id="hen-index" >
-  <div class="container pt-5" >
-  <h1 id="title-new-hen">Select your hen</h1>
+  <div class="col-sm-12 col-md-8 col-lg-8 p-5" >
+  <h1 class="pt-5 " id="title-new-hen">Select your hen</h1>
   <br>
   <p>Find below a top notch selection of hens that match your criterias! </p>
   </div>
-  <div class="container">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-  <% @hens.each do |hen| %>
-    <div class="col">
-      <div class="card">
-        <div class="card-sl">
-          <div class="card-image">
-            <img src="<%= hen.profile_picture %>" class="img-fluid card-img-top" alt="hen-profile-picture">
-          </div>
-          <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
-          <h5 class="card-heading"><%= hen.name %></h5>
-          <div class="card-text">
-            <p><%= hen.description %></p>
-            <p>Breed: <%= hen.breed %></p>
-            <p>Eggs Per Day: <%= hen.eggs_per_day %></p>
-            <p>Rating: <%= hen.rating %></p>
-            <p>Price Per Day: <%= hen.price_per_day %>€</p>
-          </div>
-          <div class="col text-center">
-            <%= link_to hen_path(hen) do %>
-              <button class="card-button" type="button" >Select <%= hen.name %></button>
-            <% end %>
-          </div>
-        </div>
+
+  <div class="main-container justify-content-center pb-5">
+      <div class="cards">
+        <% @hens.each do |hen| %>
+            <div class="card" style="width: 18rem;">
+                <img src="<%= hen.profile_picture %>" class="card-img img-fluid img-cover" alt="...">
+              <div class="card-body">
+                <h4><b><%= hen.name %></b></h4>
+                <p><%= hen.description %></p>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item"><%= hen.breed %></li>
+                <li class="list-group-item"><%= hen.eggs_per_day %> eggs per day</li>
+                <li class="list-group-item"><%= hen.price_per_day %>$</li>
+                </ul>
+                <%= link_to  hen_path(hen) do %>
+                  <button class="card-button" type="button" >Select</button>
+                <% end %>
+              </div>
+            </div>
+        <% end %>
+
       </div>
-    </div>
-  <% end %>
-</div>
   </div>
+
 </div>
