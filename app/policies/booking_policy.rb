@@ -1,16 +1,16 @@
-class HenPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def update?
-    record.user == current_user
+  def new?
+    true
   end
 
-  def create?
-    true
+  def update?
+    record.user == current_user
   end
 
   def destroy?
@@ -21,7 +21,7 @@ class HenPolicy < ApplicationPolicy
     true
   end
 
-  def new?
+  def create?
     true
   end
 end
