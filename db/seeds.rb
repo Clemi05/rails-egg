@@ -18,6 +18,7 @@ Hen.create(name: "Suzanne", description: "Suzanne is a Mega Hen, the best breed 
 Hen.create(name: "Aristide", description: "Aristide is a Stupid Hen is the stupidiest breed of hen in the world! She is very stupid and lays stupids eggs", rating: 1.1, price_per_day: 1, breed: "Stupid Hen", eggs_per_day: 2, location: "Paris 75004", profile_picture: "https://res.cloudinary.com/charlotte-smets/image/upload/v1637073577/sippakorn-yamkasikorn-wWIK8hnESnY-unsplash_xgxg19.jpg")
 Hen.create(name: "Jacqueline", description: "Jacqueline is a Cool Hen, the coolest breed of hen in the world! She is soooooo cooooool and lays very very coooool eggs.", rating: 4.1, price_per_day: 15, breed: "Stupid Hen", eggs_per_day: 8, location: "Paris 75002", profile_picture: "https://res.cloudinary.com/charlotte-smets/image/upload/v1637060480/jacqueline_hfxdpw.jpg")
 Hen.create(name: "Victorine", description: "Victorine is a very classic Hen, nothing really important to say about this one. Lays very classic eggs, perfect for an omelette.", rating: 3.5, price_per_day: 25, breed: "Stupid Hen", eggs_per_day: 25, location: "Paris 75001", profile_picture: "https://res.cloudinary.com/charlotte-smets/image/upload/v1637144835/monika-kubala-DIjzFYrzHVw-unsplash_xoon6l.jpg")
+
 puts "Hens created!"
 
 puts "Creating Users..."

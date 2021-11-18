@@ -7,6 +7,11 @@ class HensController < ApplicationController
         lng: hen.longitude,
       }
       end
+    if params[:query].present?
+      @hens = Hen.search_by_name_and_breed(params[:query])
+    else
+      @hens = Hen.all
+    end
   end
 
   def show

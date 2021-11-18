@@ -13,8 +13,11 @@
       </div>
       <div class="card-product-infos">
         <h2>Total Price</h2>
-        <p><%= @booking.hen.price_per_day * 30 %>€</p>
+        <p><%= @booking.hen.price_per_day * 30 %>$</p>
       </div>
     </div>
   </div>
+  
+  <%= link_to "Book another hen", hens_path, class: "btn-ghost" %>
+
 </div>
