@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= @hen.name %></h1>
   <div class="d-flex justify-content-start">
-    <p><i class="fas fa-egg"></i> <%= @hen.rating %></p>
+    <p><i class="fas fa-star"></i> <%= @hen.rating %></p>
   </div>
   <%# img need to be changed to cl_img_tag in order to connect to Cloudinary %>
   <div class="frame">
@@ -9,27 +9,38 @@
   </div>
 
   <div class="row">
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2>Description</h2>
-        <p><%= @hen.description %></p>
+    <div class="col-6">
+      <div class="card-product">
+        <div class="card-product-infos">
+          <h2><i class="fas fa-quote-left"></i> Description</h2>
+          <p><%= @hen.description %></p>
+        </div>
+        <div class="card-product-infos">
+          <h2><i class="fas fa-feather"></i> Breed</h2>
+          <p><%= @hen.breed %></p>
+        </div>
+        <div class="card-product-infos">
+          <h2><i class="fas fa-egg"></i> Eggs/day</h2>
+          <p><%= @hen.eggs_per_day %></p>
+        </div>
+        <div class="card-product-infos">
+          <h2><i class="fas fa-dollar-sign"></i> Price/day</h2>
+          <p><%= @hen.price_per_day %>$</p>
+        </div>
       </div>
-      <div class="card-product-infos">
-        <h2>Breed</h2>
-        <p><%= @hen.breed %></p>
-      </div>
-      <div class="card-product-infos">
-        <h2>Eggs/day</h2>
-        <p><%= @hen.eggs_per_day %></p>
-      </div>
-      <div class="card-product-infos">
-        <h2>Price/day</h2>
-        <p><%= @hen.price_per_day %>€</p>
-      </div>
-      <div class="card-product-infos">
-        <%= link_to new_hen_booking_path(@hen) do %>
-          <button class="main-button" type="button" >Book a hen now!</button>
-        <% end %>
+      <%= link_to "Back", hens_path, class: "btn-ghost" %>
+    </div>
+
+
+    <div class="col-6">
+      <h2>Book <%= @hen.name%> now!</h2>
+      <div class="form-wrapper">
+        <%= simple_form_for([@hen, @booking]) do |f| %>
+          <%= f.input :start_date, as: :string, input_html: {class: "datepicker"} %><br>
+          <%= f.input :end_date, as: :string, input_html: {class: "datepicker"} %><br>
+          <h4><strong>Price/day: <%= @hen.price_per_day %>$</strong></h4>
+          <%= f.submit class: "main-button"%>
+        <% end %><br>
       </div>
     </div>
   </div>
