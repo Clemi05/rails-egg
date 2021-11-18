@@ -1,6 +1,12 @@
 class HensController < ApplicationController
   def index
     @hens = policy_scope(Hen)
+      @markers = @hens.geocoded.map do |hen|
+      {
+        lat: hen.latitude,
+        lng: hen.longitude,
+      }
+      end
     if params[:query].present?
       @hens = Hen.search_by_name_and_breed(params[:query])
     else
