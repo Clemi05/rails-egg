@@ -24,3 +24,10 @@ import { initFlatpickr } from "../plugins/flatpickr";
   document.addEventListener("turbolinks:load", () => {
     initFlatpickr();
   } );
+
+import { Application } from "stimulus";
+import { definitionsFromContext } from "stimulus/webpack-helpers";
+
+const application = Application.start();
+const context = require.context("../controllers", true, /\.js$/);
+application.load(definitionsFromContext(context));

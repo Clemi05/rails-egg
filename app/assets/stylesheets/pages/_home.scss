@@ -178,6 +178,9 @@ p {
   border-radius: 1em ;
   border: none;
   max-height: 55rem;
+  i {
+    color: #F9B00F;
+  }
 }
 
 .button-blue {
@@ -246,13 +249,17 @@ p {
 }
 
 .card-button {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    width: 100%;
-    background-color: #131429;
-    border: none;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #131429;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }

@@ -1,7 +1,8 @@
 <div class="container">
   <h1><%= @hen.name %></h1>
-  <div class="d-flex justify-content-start">
+  <div class="d-flex justify-content-between">
     <p><i class="fas fa-star"></i> <%= @hen.rating %></p>
+    <p><i class="fas fa-map-marker-alt"></i> <%= @hen.location %></p>
   </div>
   <%# img need to be changed to cl_img_tag in order to connect to Cloudinary %>
   <div class="frame">
@@ -10,38 +11,47 @@
 
   <div class="row">
     <div class="col-6">
-      <div class="card-product">
-        <div class="card-product-infos">
+      <div class="card-description">
+        <div class="card-description-infos border-bottom">
           <h2><i class="fas fa-quote-left"></i> Description</h2>
           <p><%= @hen.description %></p>
         </div>
-        <div class="card-product-infos">
+        <div class="card-description-infos border-bottom">
           <h2><i class="fas fa-feather"></i> Breed</h2>
           <p><%= @hen.breed %></p>
         </div>
-        <div class="card-product-infos">
+        <div class="card-description-infos border-bottom">
           <h2><i class="fas fa-egg"></i> Eggs/day</h2>
           <p><%= @hen.eggs_per_day %></p>
         </div>
-        <div class="card-product-infos">
+        <div class="card-description-infos">
           <h2><i class="fas fa-dollar-sign"></i> Price/day</h2>
           <p><%= @hen.price_per_day %>$</p>
         </div>
       </div>
-      <%= link_to "Back", hens_path, class: "btn-ghost" %>
     </div>
 
-
-    <div class="col-6">
-      <h2>Book <%= @hen.name%> now!</h2>
+    <div class="card-booking col-6 my-3">
+      <h2>Book <%= @hen.name %></h2>
       <div class="form-wrapper">
-        <%= simple_form_for([@hen, @booking]) do |f| %>
-          <%= f.input :start_date, as: :string, input_html: {class: "datepicker"} %><br>
-          <%= f.input :end_date, as: :string, input_html: {class: "datepicker"} %><br>
-          <h4><strong>Price/day: <%= @hen.price_per_day %>$</strong></h4>
-          <%= f.submit class: "main-button"%>
-        <% end %><br>
+        <div data-controller="price">
+          <%= simple_form_for([@hen, @booking]) do |f| %>
+            <%= f.input :start_date, as: :string, input_html: {class: "datepicker", "data-price-target": "start_date", "type": "text" } %>
+            <%= f.input :end_date, as: :string, input_html: {class: "datepicker", "data-price-target": "end_date", "type": "text", "data-action": "input->price#updatePrice"} %><br>
+            <div class="d-flex justify-content-between px-2">
+              <h4><strong>Total</strong></h4>
+              <h4 data-price-target= "price"> <%= @hen.price_per_day %>$</h4>
+            </div>
+            <%= f.submit class: "booking-btn"%>
+          <% end %>
+        </div>
       </div>
+    </div>
+
+    <div id="map" style="width: 100%; height: 300px;"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 </div>
