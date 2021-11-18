@@ -1,4 +1,83 @@
-/* Button Ghost */
+/* CSS Yellow Button - Main Button */
+.main-button {
+  margin: 20px 0px;
+  background-color: #f9b011;
+  color: #131429;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 15px 28px;
+  border-radius: 2em;
+}
+
+/* CSS Main Button Blue (for Hen New page) */
+.main-button-blue {
+  margin: 20px 0px;
+  background-color: #131429;
+  color: #ffff;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 15px 28px;
+  border-radius: 2em;
+}
+
+/* CSS Button Blue*/
+.button-blue {
+  background-color: #131429;
+  color: #ffff;
+  border: none;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 28px;
+  min-width: 80px;
+  border-radius: 0.3em;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* CSS Button Blue for Search */
+.button-blue-search {
+  background-color: #131429;
+  color: #ffff;
+  border: none;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 28px;
+  min-width: 80px;
+  border-radius: 0 0.3em 0.3em 0;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.button-blue-search:hover {
+  background-color: #d60202;
+
+}
+
+/* CSS Button Card (Hens Index page) */
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #131429;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+/* CSS Button Ghost */
 a.btn-ghost {
   text-decoration: none;
 
@@ -21,7 +100,8 @@ a.btn-ghost {
   opacity: 1;
 }
 
-.booking-btn {
+/* Button for Booking Card */
+.btn-booking {
   width: 100%;
   margin: 20px 0px;
   background-color: #f9b011;
