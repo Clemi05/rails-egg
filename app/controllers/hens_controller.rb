@@ -5,6 +5,7 @@ class HensController < ApplicationController
 
   def show
     @hen = Hen.find(params[:id])
+    @booking = Booking.new
     authorize @hen
   end
 
