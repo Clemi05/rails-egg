@@ -8,16 +8,21 @@
       <br>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-      <div class="search-box">
-          <%= form_tag hens_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a hen"
-          %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
-        <% end %>
-      </div>
+
+          <%= form_tag hens_path, class: "d-flex", method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "p form-control",
+              placeholder: "Find a hen"
+            %>
+            <button type="submit" class="button-blue-search">
+              <i class="fa fa-search"></i>
+            </button>
+          <% end %>
+
+
+
+
 
       </div>
       <div class="col-sm-12 col-md-4 col-lg-4">
