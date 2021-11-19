@@ -26,7 +26,7 @@
         </div>
         <div class="card-description-infos">
           <h2><i class="fas fa-dollar-sign"></i> Price/day</h2>
-          <p><%= @hen.price_per_day %>$</p>
+          <p><span id="price-per-day"><%= @hen.price_per_day %></span>$</p>
         </div>
       </div>
     </div>
@@ -36,11 +36,11 @@
       <div class="form-wrapper">
         <div data-controller="price">
           <%= simple_form_for([@hen, @booking]) do |f| %>
-            <%= f.input :start_date, as: :string, input_html: {class: "datepicker", "data-price-target": "start_date", "type": "text" } %>
-            <%= f.input :end_date, as: :string, input_html: {class: "datepicker", "data-price-target": "end_date", "type": "text", "data-action": "input->price#updatePrice"} %><br>
+            <%= f.input :start_date, as: :string, input_html: {class: "datepicker", "data-price-target": "start-date"} %>
+            <%= f.input :end_date, as: :string, input_html: {class: "datepicker", "data-price-target": "end-date", "data-action": "input->price#updatePrice"} %><br>
             <div class="d-flex justify-content-between px-2">
               <h4><strong>Total</strong></h4>
-              <h4 data-price-target= "price"> <%= @hen.price_per_day %>$</h4>
+              <h4 data-price-target= "price" id="total-price"> </h4>
             </div>
             <%= f.submit class: "btn-booking"%>
           <% end %>
