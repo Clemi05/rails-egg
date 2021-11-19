@@ -1,4 +1,10 @@
 
+#dashboard {
+  color: white;
+  background-color: #f9b011;
+  height: 100vh;
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -9,9 +15,7 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 1em;
   margin-top: 35px;
   margin-bottom: -10px;
 }
@@ -22,10 +26,10 @@
   height: 430px;
   width: 300;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
   margin-top: 15px;
   width: 190px;
+  border-radius: 1em;
 }
 
 .card-product img {
@@ -34,6 +38,8 @@
   object-fit: cover;
   margin-top: 10px;
   padding-left: 10px;
+  border-radius: 1em;
+
 }
 
 .card-product h2 {
