@@ -8,5 +8,4 @@ Rails.application.routes.draw do
   resources :hens, only: :destroy
 
   get 'dashboard', to: 'pages#dashboard'
-
 end
