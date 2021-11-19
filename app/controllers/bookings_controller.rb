@@ -18,7 +18,8 @@ class BookingsController < ApplicationController
     calculate_price
     authorize @booking
     if @booking.save
-      redirect_to hen_booking_path(@hen, @booking)
+      redirect_to dashboard_path
+      # redirect_to hen_booking_path(@hen, @booking)
     else
       render :new
     end
