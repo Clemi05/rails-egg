@@ -8,7 +8,7 @@ class HensController < ApplicationController
       }
       end
     if params[:query].present?
-      @hens = Hen.search_by_location(params[:query])
+      @hens = Hen.search_by_location_name_breed(params[:query])
     else
       @hens = Hen.all
     end
