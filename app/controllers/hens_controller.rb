@@ -17,6 +17,7 @@ class HensController < ApplicationController
   def show
     @hen = Hen.find(params[:id])
     @booking = Booking.new
+    @markers = [{ lat: @hen.latitude, lng: @hen.longitude }]
     authorize @hen
   end
 
