@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.hen = @hen
     @booking.user = current_user
+    calculate_price
     authorize @booking
     if @booking.save
       redirect_to hen_booking_path(@hen, @booking)
@@ -31,5 +32,9 @@ class BookingsController < ApplicationController
 
   def set_hen
     @hen = Hen.find(params[:hen_id])
+  end
+
+  def calculate_price
+    @booking.price = @booking.hen.price_per_day * (@booking.end_date - @booking.start_date).to_i
   end
 end
