@@ -8,9 +8,7 @@
   <div class="frame">
   <% if @hen.photo.attached? %>
     <%= cl_image_tag @hen.photo.key, height: 300, width: 400, crop: :fill %>
-    <%# <% else %>
-     <%# <%= img src="<%= hen.profile_picture %>" class="card-img img-fluid img-cover" alt="..." %> %> %>
-    <% end %>
+  <% end %>
   </div>
 
   <div class="row">
