@@ -6,7 +6,7 @@
   </div>
   <%# img need to be changed to cl_img_tag in order to connect to Cloudinary %>
   <div class="frame">
-    <img src="<%= @hen.profile_picture %>" alt="<%= @hen.name%>">
+    <%= cl_image_tag @hen.profile_picture.key, height: 300, width: 400, crop: :fill %>
   </div>
 
   <div class="row">
