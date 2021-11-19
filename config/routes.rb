@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[show new create]
   end
   resources :hens, only: :destroy
+
+  get 'dashboard', to: 'pages#dashboard'
+
 end
