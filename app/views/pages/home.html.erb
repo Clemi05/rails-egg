@@ -1,27 +1,28 @@
 <div class="d-flex align-content-center flex-wrap header pt-5" id="header">
-  <div class="container-sm">
-  <div class="row  p-5">
+  <div class="container-sm ">
+    <div class="row  p-5">
       <div class="col-sm-12 col-md-8 col-lg-8">
-      <h4>FIND YOUR PERFECT HEN</h4>
-      <h1>Are you looking for the perfect hen ?
-      <br>Egg got this for you !</h1>
-      <br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h4>FIND YOUR PERFECT HEN</h4>
+        <h1>Are you looking for the perfect hen ?
+        <br>Egg got this for you !</h1>
+        <br>
+        <p>Egg is your solution to have fresh eggs every morning ! How many eggs do you need per day ? 10, 20, 50 ? With Egg, you'll find the hen that answer you need!
+       Let's have some sunny sides up for breakfast now ! </p>
 
-      <div class="search-box">
-          <%= form_tag hens_path, method: :get do %>
+        <%= form_tag hens_path, class: "d-flex", method: :get do %>
           <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "p form-control",
             placeholder: "Find a hen"
           %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <button type="submit" class="button-blue-search">
+            <i class="fa fa-search"></i>
+          </button>
         <% end %>
       </div>
 
-      </div>
       <div class="col-sm-12 col-md-4 col-lg-4">
-            <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637146303/chicken-image-23001_ivjip8.png" class="img-fluid rounded" alt="...">
+        <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637146303/chicken-image-23001_ivjip8.png" class="img-fluid rounded" alt="...">
       </div>
     </div>
   </div>
@@ -36,7 +37,8 @@
       <h1>Adopt Jacqueline for two weeks!</h1>
 
       <p id="p-jacqueline"> <br>Jacqueline is a Super Hen from Mayenne !
-      She makes more than 20eggs per week and is super friendly with kids! </p>
+        She makes more than 20eggs per week and is super friendly with kids!
+      </p>
       <button class="main-button" type="button">Discover Jacqueline</button>
       <%= link_to hens_path do %>
         <button class="main-button-blue mt-4" type="button" >Discover all hen</button>

@@ -1,34 +1,36 @@
 <div class="flexbox">
-<div class="container-fluid py-5" id="hen-index">
-<h1 id="title-new-hen">Select your hen</h1>
-<p>Find below a top notch selection of hens that match your criterias! </p>
-</div>
-  <div class="main-container p-4">
-      <div class="cards">
-        <% @hens.each do |hen| %>
-            <div class="card" style="width: 18rem;">
-                <img src="<%= hen.profile_picture %>" class="card-img img-fluid img-cover" alt="...">
-              <div class="card-body">
-                <h4><b><%= hen.name %></b></h4>
-                <p><%= hen.description %></p>
-                <ul class="list-group list-group-flush">
-                <li class="list-group-item"><%= hen.breed %></li>
-                <li class="list-group-item"><%= hen.eggs_per_day %> eggs per day</li>
-                <li class="list-group-item"><%= hen.price_per_day %>$</li>
-                <li class="list-group-item"><%= hen.location %></li>
+  <div class="container-fluid py-5" id="hen-index">
+    <h1 id="title-new-hen">Select your hen</h1>
+    <p>Find below a top notch selection of hens that match your criterias!</p>
+  </div>
 
-                </ul>
-                <%= link_to  hen_path(hen) do %>
-                  <button class="card-button" type="button" >Select</button>
-                <% end %>
-              </div>
-            </div>
-        <% end %>
-      </div>
-      <div id="map" style="width: 100%; height: 600px;"
-        data-controller="mapbox"
-        data-mapbox-markers-value="<%= @markers.to_json %>"
-        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+  <div class="main-container p-4">
+    <div class="cards">
+      <% @hens.each do |hen| %>
+        <div class="card" style="width: 18rem;">
+
+            <img src="<%= hen.profile_picture %>" class="card-img img-fluid img-cover" alt="...">
+          <div class="card-body">
+            <h4><b><%= hen.name %></b></h4>
+            <p><%= hen.description %></p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="fas fa-feather"></i> <%= hen.breed %></li>
+              <li class="list-group-item"><i class="fas fa-egg"></i> <%= hen.eggs_per_day %> eggs/day</li>
+              <li class="list-group-item"><i class="fas fa-dollar-sign"></i> <%= hen.price_per_day %>$</li>
+              <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> <%= hen.location %></li>
+            </ul>
+            <%= link_to  hen_path(hen) do %>
+              <button class="card-button" type="button" >Select</button>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="map" style="width: 100%; height: 600px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>

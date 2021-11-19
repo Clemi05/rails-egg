@@ -1,25 +1,29 @@
-<div id="hen-new" >
-  <div class="container pt-5" >
-  <h1 id="title-new-hen">Are you the lucky owner of a hen?</h1>
-  <br>
-  <p>We bet you are! Just fill the form below to add your little nugget in our repertory!
-  <br> You will soon receive tons of requests to rent your beautiful hen! </p>
+<div class="pb-5" id="hen-new" >
+  <div class="container col-lg-8 com-md-8 col-sm-12 pt-5" >
+    <h1 id="title-new-hen">Are you the lucky owner of a hen?</h1>
+    <br>
+    <p>We bet you are! Just fill the form below to add your little nugget in our repertory!
+    <br> You will soon receive tons of requests to rent your beautiful hen! </p>
   </div>
-  <div class="container mt-4" id="form" >
-  <div class="row align-items-center">
-     <div class="col-sm-12 col-md-8 col-lg-6 p-5">
+
+  <div class="container col-lg-8 com-md-12 col-sm-8 " id="form" >
+    <div class="row align-items-center">
+      <div class="col-sm-12 col-md-8 col-lg-6 p-5">
         <%= simple_form_for [ @hen,] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :breed %>
-        <%= f.input :price_per_day %>
-        <%= f.input :eggs_per_day %>
-        <%= f.submit "Add My Hen", class: "main-button-blue" %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :breed %>
+          <%= f.input :price_per_day %>
+          <%= f.input :eggs_per_day %>
+          <%= f.input :location %>
+          <%= f.input :photo, as: :file %>
+          <%# <%= f.file_field :profile_picture, class: "input-button-blue"  %>
+          <%= f.submit "Add My Hen", class: "main-button-blue" %>
         <% end %>
-     </div>
-     <div class="col-sm-12 col-md-12 col-lg-6 p-5">
-       <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637073577/sippakorn-yamkasikorn-wWIK8hnESnY-unsplash_xgxg19.jpg" class="img-fluid card-img-top rounded" alt="responsive-image">
-     </div>
-  </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-6 p-5">
+        <img src="https://res.cloudinary.com/charlotte-smets/image/upload/v1637073577/sippakorn-yamkasikorn-wWIK8hnESnY-unsplash_xgxg19.jpg" class="img-fluid card-img-top rounded" alt="responsive-image">
+      </div>
+    </div>
   </div>
 </div>

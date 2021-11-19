@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsEgg</title>
+    <title> Egg</title>
+    <link rel="egg icon" href="https://res.cloudinary.com/charlotte-smets/image/upload/v1637315415/yolk_ryr4ja.png" />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# Need to add a image for the tab %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
@@ -29,13 +32,13 @@
                 <%= link_to "Home", root_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "Messages", "#", class: "nav-link" %>
+                <%= link_to "Inbox", "#", class: "nav-link" %>
               </li>
               <li class="nav-item dropdown">
                 <%= image_tag "https://res.cloudinary.com/charlotte-smets/image/upload/v1637057406/y8dusddghyzvhzemhrzm.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <%= link_to "Rend a hen", new_hen_path, class: "dropdown-item" %>
-                  <%= link_to "Another action", "#", class: "dropdown-item" %>
+                  <%= link_to "Add new hen", new_hen_path, class: "dropdown-item" %>
+                  <%= link_to "Settings", "#", class: "dropdown-item" %>
                   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
               </li>
@@ -66,7 +69,7 @@
       <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
     <div class="footer-copyright">
-      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+      This footer is made with <i class="fas fa-heart"></i> by Egg.
     </div>
   </div>
   </body>

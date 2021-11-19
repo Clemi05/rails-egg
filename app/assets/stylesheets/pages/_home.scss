@@ -1,28 +1,9 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-
-h4 {
-  font-weight: 600;
-  font-family: 'Quicksand', sans-serif;;
-  color: #131429;
-  font-size: 16px;
-  }
-
-h1 {
-  font-weight: 600;
-  font-family: 'Quicksand', sans-serif;;
-  color: #ffffff;
-  font-size: 44px;
-  }
-
-.navbar-lewagon .navbar-brand img {
-    width: 60px;
-}
-
 #jacqueline {
-    color: white;
-    background-color: #131429;
+  color: white;
+  background-color: #131429;
 }
 
 #p-jacqueline{
@@ -31,29 +12,18 @@ h1 {
   font-weight: 400;
 }
 .header {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    color: #ffffff;
-    height: 400px;
-    background-color: #f9b011;
-    height: 80vh;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  height: 400px;
+  background-color: #f9b011;
+  height: 80vh;
 }
 
 p {
-    color: #131429;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    }
-
-.main-button {
-    margin: 20px 0px;
-    background-color: #f9b011;
-    color: #131429;
-    border: none;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 15px 28px;
-    border-radius: 2em;
+  color: #131429;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
 }
 
 .content-wrapper {
@@ -61,22 +31,21 @@ p {
 }
 
 // CSS POUR PAGE NEW
+
+
 #hen-new {
-    color: white;
-    background-color: #f9b011;
-    height: 100vh;
+  color: white;
+  background-color: #f9b011;
+  height: auto;
 }
 
-.main-button-blue {
-    margin: 20px 0px;
-    background-color: #131429;
-    color: #ffff;
-    border: none;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 15px 28px;
-    border-radius: 2em;
+.input-button-blue {
+  background-color: #131429;
+  border-radius: 0.2em;
+  color: white;
+  padding: 6px;
 }
+
 
 #title-new-hen {
   color: #131429;
@@ -94,141 +63,29 @@ p {
   border: none;
   border-radius: 0,5em;
   height: 3em;
-  }
-.image-poule {
-  height: 20%;
+}
+  .image-poule {
+    height: 20%;
 }
 
 
 // CSS POUR PAGE INDEX
 
 #hen-index {
-    color: white;
-    background-color: #f9b011;
-    height: 100%;
-    text-align: center;
-}
-
-.cards {
-  display: grid;
-  position: sticky;
-  flex-grow: 1;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  margin: 1em;
+  color: white;
+  background-color: #f9b011;
+  height: 100%;
+  text-align: center;
 }
 
 .main-container {
   display: flex;
   background-color: #f3f3f3;
-
 }
-
 
 #map {
   position: sticky;
   top: 0;
   height: auto;
   border-radius: 1em;
-
-}
-
-
-
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-  #map {
-    display: none;
-  }
-}
-
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.card {
-  color: #131429;
-  background-color: #ffffff;
-  border-radius: 1em ;
-  border: none;
-  max-height: 55rem;
-}
-
-.button-blue {
-  background-color: #131429;
-  color: #ffff;
-  border: none;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 28px;
-  min-width: 80px;
-  border-radius: 0.3em;
-  text-align: center;
-  justify-content: center;
-  position: relative;
-}
-
-.card-img {
-    width: 20rem;
-    height: 15rem;
-    object-fit: cover;
-    border-radius: 1em 1em 0em 0em;
-
-
-  a {
-      text-decoration: none;
-    }
-}
-
-.card-image {
-  width: auto;
-  height: 130px;
-  img {
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 8px 8px 0px 0;
-    object-fit: cover;
-  }
-}
-
-.card-body{
-  a {
-    text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
-  }
-}
-
-.card-button {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    width: 100%;
-    background-color: #131429;
-    border: none;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
 }

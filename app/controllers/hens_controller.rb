@@ -8,7 +8,7 @@ class HensController < ApplicationController
       }
       end
     if params[:query].present?
-      @hens = Hen.search_by_name_and_breed(params[:query])
+      @hens = Hen.search_by_location(params[:query])
     else
       @hens = Hen.all
     end
@@ -16,6 +16,7 @@ class HensController < ApplicationController
 
   def show
     @hen = Hen.find(params[:id])
+    @booking = Booking.new
     authorize @hen
   end
 
@@ -41,6 +42,6 @@ class HensController < ApplicationController
   private
 
   def hen_params
-    params.require(:hen).permit(:name, :description, :price_per_day, :breed, :eggs_per_day, :profile_picture)
+    params.require(:hen).permit(:name, :description, :price_per_day, :breed, :eggs_per_day, :photo)
   end
 end
