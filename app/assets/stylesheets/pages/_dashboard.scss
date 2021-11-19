@@ -1,8 +1,7 @@
-
 #dashboard {
   color: white;
   background-color: #f9b011;
-  height: 100vh;
+  height: auto;
 }
 
 .card-category {
@@ -19,7 +18,6 @@
   margin-top: 35px;
   margin-bottom: -10px;
 }
-
 
 .card-product {
   overflow: hidden;
@@ -65,6 +63,15 @@
   display: flex !important;
   justify-content: space-between;
   align-items: baseline;
+  padding: 5px 0;
+
+  h2 {
+    color: #131429;
+  }
+}
+
+.card-product-city {
+  padding: 5px 0;
 }
 
 .cards {
