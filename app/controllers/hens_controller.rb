@@ -1,11 +1,12 @@
 class HensController < ApplicationController
   def index
     @hens = policy_scope(Hen)
-    @markers = @hens.geocoded.map do |hen| {
-      lat: hen.latitude,
-      lng: hen.longitude
-    }
-    end
+      @markers = @hens.geocoded.map do |hen|
+      {
+        lat: hen.latitude,
+        lng: hen.longitude,
+      }
+      end
     if params[:query].present?
       @hens = Hen.search_by_location(params[:query])
     else
@@ -15,7 +16,6 @@ class HensController < ApplicationController
 
   def show
     @hen = Hen.find(params[:id])
-    @markers = [{ lat: @hen.latitude, lng: @hen.longitude }]
     @booking = Booking.new
     authorize @hen
   end
@@ -42,6 +42,6 @@ class HensController < ApplicationController
   private
 
   def hen_params
-    params.require(:hen).permit(:name, :description, :price_per_day, :breed, :eggs_per_day, :profile_picture)
+    params.require(:hen).permit(:name, :description, :price_per_day, :breed, :eggs_per_day, :photo)
   end
 end
