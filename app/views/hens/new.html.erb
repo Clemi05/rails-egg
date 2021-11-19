@@ -16,7 +16,8 @@
           <%= f.input :price_per_day %>
           <%= f.input :eggs_per_day %>
           <%= f.input :location %>
-          <%= f.file_field :profile_picture, class: "input-button-blue"  %>
+          <%= f.input :photo, as: :file %>
+          <%# <%= f.file_field :profile_picture, class: "input-button-blue"  %>
           <%= f.submit "Add My Hen", class: "main-button-blue" %>
         <% end %>
       </div>
