@@ -1,6 +1,6 @@
 <div class="pb-5" id="dashboard" >
   <div class="container col-lg-8 com-md-8 col-sm-12 pt-5" >
-    <h2 id="title-new-hen"> Welcome back <strong><%= current_user.email %></strong> ! </h2>
+    <h2 id="title-new-hen"> Welcome back <span class="user-email"><%= current_user.email %></span> ! </h2>
     <br>
     <p>Find below all the informations about your last bookings. </p>
   </div>
@@ -13,7 +13,7 @@
           <div class="card-product-infos">
             <div class="card-product-title border-bottom">
               <h2><%= booking.hen.name %></h2>
-              <p><i class="fas fa-star"></i> <%= booking.hen.rating %></p>
+              <p><strong><i class="fas fa-star"></i> <%= booking.hen.rating %></strong></p>
             </div>
             <div class="card-product-title border-bottom">
               <p><strong>Starting Date Ending Date</strong></p>
