@@ -86,8 +86,8 @@ test:
 production:
   <<: *default
 
-  # Production depends on precompilation of packs prior to booting for performance.
-  compile: false
+  # Production depends on precompilation of packs prior to booting for performance. Change to true for test.
+  compile: true
 
   # Extract and emit a css file
   extract_css: true
