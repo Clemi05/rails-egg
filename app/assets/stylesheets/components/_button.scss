@@ -52,12 +52,14 @@
   text-align: center;
   justify-content: center;
   position: relative;
+  opacity: 0.8;
+
+  &:hover {
+    background-color: #131429;
+    opacity: 1;
+  }
 }
 
-.button-blue-search:hover {
-  background-color: #d60202;
-
-}
 
 /* CSS Button Card (Hens Index page) */
 .card-button {
