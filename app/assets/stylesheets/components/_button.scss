@@ -2,7 +2,7 @@
 .main-button {
   margin: 20px 0px;
   background-color: #f9b011;
-  color: #131429;
+  color: #fff;
   border: none;
   text-decoration: none;
   font-weight: 500;
@@ -11,6 +11,8 @@
 
   &:hover {
     color: #fff;
+    background-color: grey;
+    text-decoration: none;
   }
 }
 

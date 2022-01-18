@@ -2,15 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 #jacqueline {
-  color: white;
+  color: #fff;
   background-color: #131429;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
 }
 
-#p-jacqueline{
-  color: white;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-}
+// #p-jacqueline{
+//   color: white;
+//   font-family: 'Quicksand', sans-serif;
+//   font-weight: 400;
+// }
+
 .header {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
@@ -18,12 +29,17 @@
   height: 400px;
   background-color: #f9b011;
   height: 80vh;
-}
 
-p {
-  color: #131429;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
+  p {
+    color: #131429;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .content-wrapper {
@@ -32,13 +48,11 @@ p {
 
 // CSS POUR PAGE NEW
 
-
 #hen-new {
   color: white;
   background-color: #f9b011;
   height: auto;
 }
-
 
 #title-new-hen {
   color: #131429;

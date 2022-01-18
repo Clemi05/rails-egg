@@ -7,7 +7,6 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%# Need to add a image for the tab %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -28,12 +27,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
             <% if user_signed_in? %>
-              <li class="nav-item active">
-                <%= link_to "Home", root_path, class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Inbox", "#", class: "nav-link" %>
-              </li>
               <li class="nav-item dropdown">
                 <%= image_tag "https://res.cloudinary.com/charlotte-smets/image/upload/v1637057406/y8dusddghyzvhzemhrzm.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -58,9 +51,11 @@
         </div>
       </div>
   </div>
+
   <div class="content-wrapper">
     <%= yield %>
   </div>
+
   <div class="footer">
     <div class="footer-links">
       <a href="#"><i class="fab fa-github"></i></a>
